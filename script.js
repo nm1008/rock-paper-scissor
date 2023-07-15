@@ -22,14 +22,11 @@ function play(playerSelection, computerSelection){
     } else {
         return "Draw!";
     }
-
 }
 
 const playerSelection = "PAPER";
 const computerSelection = getComputerChoice();
 
-console.log(computerSelection)
-
-console.log(play(playerSelection, computerSelection));
+alert(play(playerSelection, computerSelection));
 
 
