@@ -24,9 +24,12 @@ function play(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = "PAPER";
-const computerSelection = getComputerChoice();
-
-alert(play(playerSelection, computerSelection));
+function game() {
+    for (let i = 1; i <= 5; i++){
+        const computerSelection = getComputerChoice();
+        let playerSelection = prompt("Choose: Rock, Paper or Scissor?");
+        alert(play(playerSelection, computerSelection));
+    }
+}
 
 
