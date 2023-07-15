@@ -1,7 +1,7 @@
 function getComputerChoice() {
     let pick = ['rock', 'paper', 'scissor'];
-    let randomNumber = Math.floor(Math.random() * 3)
-    return pick[randomNumber]; 
+    return pick[Math.floor(Math.random() * 3)];
+    
 }
 
 function play(playerSelection, computerSelection){
