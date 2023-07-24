@@ -5,8 +5,11 @@ const btn3 = document.querySelector('.btn3');
 const btnContainer = document.querySelector('.btn')
 
 //creating div element to display score
-const userDiv = document.createElement('div');
-const computerDiv = document.createElement('div');
+// const userDiv = document.createElement('div');
+// const computerDiv = document.createElement('div');
+
+const player = document.querySelector('.playerScore')
+const computer = document.querySelector('.computerScore')
 
 let userScore = 0;
 let computerScore = 0;
@@ -53,11 +56,10 @@ function game(choice) {
         alert(play(playerSelection, computerSelection));     
    
     // alert("Your score is " + userScore );
-        userDiv.textContent = `Your score is ${userScore }`
-        btnContainer.appendChild(userDiv);
+        player.innerHTML = playerScore
 
-        computerDiv.textContent = `Computer score is ${computerScore }`
-        btnContainer.appendChild(computerDiv);
+        // computer.textContent = computerScore
+        // btnContainer.appendChild(computer);
 
 
     // if the player or computer scores 5 this if statement declares the winner and prompts if the player  wants to play another round if not alerts game over and refreshes the page for 5 seconds
@@ -67,8 +69,8 @@ function game(choice) {
         if(playAgain){
             userScore = 0;
             computerScore = 0;
-            userDiv.textContent = "Your score is 0";
-            computerDiv.textContent = "Computer score is 0";
+            // userDiv.textContent = "Your score is 0";
+            // computerDiv.textContent = "Computer score is 0";
         } else {
             alert("GAME OVER!!")
             setTimeout( () => {
@@ -81,8 +83,8 @@ function game(choice) {
         if(playAgain){
             userScore = 0;
             computerScore = 0;
-            userDiv.textContent = "Your score is 0";
-            computerDiv.textContent = "Computer score is 0";
+            // userDiv.textContent = "Your score is 0";
+            // computerDiv.textContent = "Computer score is 0";
         } else {
             alert("GAME OVER!!")
             setTimeout( () => {
