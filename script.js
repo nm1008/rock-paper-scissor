@@ -37,8 +37,6 @@ function play(playerSelection, computerSelection){
     } else {
         return "Draw!";
     }  
-    
-    
 }
 
 function game(choice) {
@@ -54,23 +52,35 @@ function game(choice) {
         computerDiv.textContent = `Computer score is ${computerScore }`
         btnContainer.appendChild(computerDiv);
 
-        if(userScore === 5 || computerScore === 5){
-            let playAgain = confirm("Do you want to play again?")
-            if (playAgain) {
-                let userScore = 0;
-                let computerScore = 0;
-                userDiv.textContent = "Your score is 0";
-                computerDiv.textContent = "Computer score is 0";
-            } else {
-                alert("GAME OVER!!")
-            }
-          
-        
-            
+    if (userScore === 5) {
+        alert("You Win!")
+        let playAgain = confirm("Do you want to play again?")
+        if(playAgain){
+            userScore = 0;
+            computerScore = 0;
+            userDiv.textContent = "Your score is 0";
+            computerDiv.textContent = "Computer score is 0";
+        } else {
+            alert("GAME OVER!!")
+            setTimeout( () => {
+                location.reload();
+            }, 5000)
         }
-
-        
-      
+    } else if (computerScore === 5) {
+        alert("Computer Wins")
+        let playAgain = confirm("Do you want to play again?")
+        if(playAgain){
+            userScore = 0;
+            computerScore = 0;
+            userDiv.textContent = "Your score is 0";
+            computerDiv.textContent = "Computer score is 0";
+        } else {
+            alert("GAME OVER!!")
+            setTimeout( () => {
+                location.reload();
+            }, 5000)
+        }
+    }
 }
 
 btn1.addEventListener('click', () => {
