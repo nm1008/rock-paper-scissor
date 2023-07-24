@@ -1,18 +1,24 @@
+//selectors for button
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 const btnContainer = document.querySelector('.btn')
+
+//creating div element to display score
 const userDiv = document.createElement('div');
 const computerDiv = document.createElement('div');
 
 let userScore = 0;
 let computerScore = 0;
 
+
+//computer picks choice
 function getComputerChoice() {
     let pick = ['rock', 'paper', 'scissor'];
     return pick[Math.floor(Math.random() * 3)];
 }
 
+//function that starts to compare 2 value to see who is winner and adds up the score of the player who wins that round
 function play(playerSelection, computerSelection){
     let userPick = playerSelection.toLowerCase();
     
@@ -39,6 +45,7 @@ function play(playerSelection, computerSelection){
     }  
 }
 
+// a function that initiates the game and prints out the score on the screen 
 function game(choice) {
    
         const computerSelection = getComputerChoice();
@@ -52,6 +59,8 @@ function game(choice) {
         computerDiv.textContent = `Computer score is ${computerScore }`
         btnContainer.appendChild(computerDiv);
 
+
+    // if the player or computer scores 5 this if statement declares the winner and prompts if the player  wants to play another round if not alerts game over and refreshes the page for 5 seconds
     if (userScore === 5) {
         alert("You Win!")
         let playAgain = confirm("Do you want to play again?")
@@ -83,6 +92,7 @@ function game(choice) {
     }
 }
 
+//event listener for the buttons
 btn1.addEventListener('click', () => {
     game('Rock')
 });
