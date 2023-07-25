@@ -4,9 +4,10 @@ const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 const btnContainer = document.querySelector('.btn')
 
-//creating div element to display score
-// const userDiv = document.createElement('div');
-// const computerDiv = document.createElement('div');
+// creating div element for move
+const moveDiv = document.querySelector('.move');
+const move = document.createElement('div');
+
 
 const player = document.querySelector('.playerScore')
 const computer = document.querySelector('.computerScore')
@@ -27,24 +28,30 @@ function play(playerSelection, computerSelection){
     
     if (userPick === "scissor" && computerSelection === "rock") {
         computerScore++;
-        return "You lose! Rock beats Scissor";
+        move.textContent = "You lose! Rock beats Scissor";
+        return moveDiv.appendChild(move)
     } else if (userPick === 'scissor' && computerSelection === 'paper'){
         userScore++;
-        return "You win! Scissor beats Paper";
+        move.textContent =  "You win! Scissor beats Paper";
+        return moveDiv.appendChild(move)
     } else if (userPick === 'rock' && computerSelection === 'paper'){
         computerScore++;
-        return "You lose! Paper beats Rock";
+        move.textContent =  "You lose! Paper beats Rock";
+        return moveDiv.appendChild(move)
     } else if (userPick === 'rock' && computerSelection === 'scissor') {
         userScore++;
-        return "You win! Rock beats Scissor";
+        move.textContent =  "You win! Rock beats Scissor";
     } else if (userPick === 'paper' && computerSelection === 'rock') {
         userScore++;
-        return "You Win! Paper beats Rock";
+        move.textContent =  "You Win! Paper beats Rock";
+        return moveDiv.appendChild(move)
     } else if (userPick === 'paper' && computerSelection === 'scissor') {
         computerScore++;
-        return "You lose! Scissor beats Paper";
+        move.textContent =  "You lose! Scissor beats Paper";
+        return moveDiv.appendChild(move)
     } else {
-        return "Draw!";
+        move.textContent =  "Draw!";
+        return moveDiv.appendChild(move)
     }  
 }
 
@@ -53,14 +60,10 @@ function game(choice) {
    
         const computerSelection = getComputerChoice();
         let playerSelection = choice;
-        alert(play(playerSelection, computerSelection));     
-   
-    // alert("Your score is " + userScore );
-        player.innerHTML = playerScore
-
-        // computer.textContent = computerScore
-        // btnContainer.appendChild(computer);
-
+        play(playerSelection, computerSelection)
+        
+        player.innerHTML = userScore
+        computer.innerHTML = computerScore
 
     // if the player or computer scores 5 this if statement declares the winner and prompts if the player  wants to play another round if not alerts game over and refreshes the page for 5 seconds
     if (userScore === 5) {
@@ -69,8 +72,6 @@ function game(choice) {
         if(playAgain){
             userScore = 0;
             computerScore = 0;
-            // userDiv.textContent = "Your score is 0";
-            // computerDiv.textContent = "Computer score is 0";
         } else {
             alert("GAME OVER!!")
             setTimeout( () => {
@@ -83,9 +84,6 @@ function game(choice) {
         if(playAgain){
             userScore = 0;
             computerScore = 0;
-            // userDiv.textContent = "Your score is 0";
-            // computerDiv.textContent = "Computer score is 0";
-        } else {
             alert("GAME OVER!!")
             setTimeout( () => {
                 location.reload();
