@@ -17,7 +17,8 @@ body{
   justify-content: space-between;
   border: 3px solid rgb(169, 193, 204);
   border-radius: 30px;
-  padding: 20px;
+  padding: 20px; 
+  
 }
 .container h2{
   color: white
@@ -49,16 +50,42 @@ body{
 }
 
 .rps{
- 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
 }
 
-img{
-  width: 300px;
+.rock{
+ border: 20px solid  hsl(349, 71%, 52%);
+ border-radius: 50%;
+ transition: 0.15s;
+}
+
+.rock:hover{
+  transform: scale(1.2);
+}
+
+.scissors{
+  border: 20px solid hsl(39, 89%, 49%);
   border-radius: 50%;
+  transition: 0.15s;
+}
+.scissors:hover{
+  transform: scale(1.2);
+}
+
+.paper{
+  border: 20px solid hsl(230, 89%, 62%);
+  border-radius: 50%;
+  transition: 0.15s;
+}
+.paper:hover{
+  transform: scale(1.2);
+}
+
+
+img{
+  width: 250px;
   margin: 20px 30px;
 }
