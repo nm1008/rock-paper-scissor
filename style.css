@@ -29,16 +29,16 @@ body{
   color: white
 } */
 
-/* .score{
-  display: flex;
+ .score{
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: none; */
   padding: 0px 40px;
-  border-radius: 20px;;
-  background-color: white
-} */
+  /* border-radius: 20px;;
+  background-color: white */
+} 
 
 .score-text{
   color: hsl(229, 64%, 46%)
@@ -86,4 +86,48 @@ body{
 img{
   width: 250px;
   margin: 20px 30px;
+}
+
+
+
+@media screen and (max-width: 360px){
+  
+  .rock, {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .instruction{
+    text-align: center;
+  }
+  .score{
+    width: 175px
+  }
+
+  img{
+    width: 200px
+  }
+  
+}
+
+@media screen and (max-width: 630px){
+  
+  .rock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .instruction{
+    text-align: center;
+  }
+  .score{
+    width: 200px
+  }
+
+  img{
+    width: 225px
+  }
+  
 }

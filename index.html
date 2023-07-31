@@ -9,30 +9,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
 </head>
-<body>
+<body class="d-flex min-vh-100 flex-column">
     <div class="container mt-5 mb-5 border rounded-4 p-3 d-flex justify-content-between">
         <div class="text-white">
             <h2>ROCK</h2>
             <h2>PAPER</h2>
             <h2>SCISSORS</h2>
         </div>
-        <h3 class="instruction text-white d-flex align-items-center">Let's Play!! Pick your choice!!</h3>
-        <div class="score d-flex align-items-center justify-content-center flex-column rounded-5 p-4 bg-light">
+        <h3 class="instruction text-white d-flex align-items-center text-justify">Let's Play!! Pick your choice!!</h3>
+        <div class="score d-flex align-items-center justify-content-center flex-column rounded-5 bg-light">
             <div class="mb-2 score-text">SCORE</div>
             <div class="scores player">You: 0</div>
-            <div class="scores computer">Computer: 0</div>
+            <div class="scores computer">Comp: 0</div>
         </div>
     </div>
 
-    <div class="rps d-flex flex-column justify-content-center align-items-center">
-        <div class="rps-row">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div>
             <a href="#" class="rock-link"><img src="images/rock.jpeg" alt="Image of a Rock" class="rock"></a>
             <a href="#" class="paper-link"><img src="images/paper.jpg" alt="Image of a Paper"class="paper"></a>
         </div>
-        <div class="rps-row">
+        <div>
             <a href="#" class="scissors-link"><img src="images/scissor.jpg" alt="Image of a Scissors" class="scissors"></a>
         </div>
     </div>
+
+    <footer class="footer text-light text-center mt-auto ">
+        <p>Copyright © 2023 Created by Nikko Mallari</p>
+    </footer>
 
     <!-- JS -->
     <script src="script.js"></script>
