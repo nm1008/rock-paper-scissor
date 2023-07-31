@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -5,21 +7,26 @@
 }
 
 body{
-  /* background-color: navy; */
-  /* color: white */
+  background-color:hsl(214, 47%, 23%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  
 }
 
 .container{
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 3px solid rgb(169, 193, 204);
+  border-radius: 30px;
   padding: 20px
+}
+.container h2{
+  color: white
 }
 
 .instruction{
   display: flex;
   align-items: center;
+  color: white
 }
 
 .score{
@@ -27,7 +34,16 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  padding: 10px 20px;
-  border-radius: 10px;;
+  border: none;
+  padding: 0px 40px;
+  border-radius: 20px;;
+  background-color: white
+}
+
+.score-text{
+  color: hsl(229, 64%, 46%)
+}
+
+.scores{
+  color: hsl(217, 16%, 45%);
 }
