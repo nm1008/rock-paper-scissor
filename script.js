@@ -8,7 +8,6 @@ const btnContainer = document.querySelector('.btn')
 const moveDiv = document.querySelector('.move');
 const move = document.createElement('div');
 
-
 const player = document.querySelector('.playerScore')
 const computer = document.querySelector('.computerScore')
 

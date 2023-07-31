@@ -21,13 +21,18 @@ body{
 .scoreboard{
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     gap: 50px;
-    color: #C7CCDB
+    color: #C7CCDB;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin: 10px 500px;
 }
 
-.player .computer, h2{
+.player .computer, h2, p{
     padding: 20px 0px;
+    font-size: 28px;
 }
 
 .move {
