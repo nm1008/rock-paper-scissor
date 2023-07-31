@@ -1,91 +1,33 @@
 *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    
-}
-body{
-    background-color: #474954;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.header{
-    text-align: center;
-    margin: 10px 0px 30px 0px;
-    color: #C7CCDB
-}
-
-.scoreboard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 50px;
-    color: #C7CCDB;
-    border: 5px solid white;
-    border-radius: 20px;
-    margin: 10px 500px;
-}
-
-.player .computer, h2, p{
-    padding: 20px 0px;
-    font-size: 28px;
-}
-
-.move {
-    text-align: center;
-    color: #C7CCDB;
-    font-weight: bolder;
-    font-size: 24px;
-    margin: 30px 0px
-}
-
-.btn{
-    display: flex;
-    justify-content: center;
-    gap: 50px
-}
-
-button {
-  background-color: #2A324B;
-  border: 1px solid transparent;
-  border-radius: .75rem;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  padding: .75rem 1.2rem;
-  text-align: center;
-  text-decoration: none #6B7280 solid;
-  text-decoration-thickness: auto;
-  transition-duration: .2s;
-  transition-property: background-color,border-color,color,fill,stroke;
-  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
 }
 
-button:hover {
-  background-color: #374151;
+body{
+  /* background-color: navy; */
+  /* color: white */
 }
 
-button:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.container{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px
 }
 
-@media (min-width: 768px) {
-  button {
-    padding: .75rem 1.5rem;
-  }
+.instruction{
+  display: flex;
+  align-items: center;
+}
+
+.score{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;;
 }
