@@ -30,25 +30,20 @@ function play(playerSelection, computerSelection){
     } else if (userPick === 'scissor' && computerSelection === 'paper'){
         userScore++;
         move.textContent =  "You win! Scissor beats Paper";
-       
     } else if (userPick === 'rock' && computerSelection === 'paper'){
         computerScore++;
         move.textContent =  "You lose! Paper beats Rock";
-       
     } else if (userPick === 'rock' && computerSelection === 'scissor') {
         userScore++;
         move.textContent =  "You win! Rock beats Scissor";
     } else if (userPick === 'paper' && computerSelection === 'rock') {
         userScore++;
         move.textContent =  "You Win! Paper beats Rock";
-       
     } else if (userPick === 'paper' && computerSelection === 'scissor') {
         computerScore++;
         move.textContent =  "You lose! Scissor beats Paper";
-       
     } else {
         move.textContent =  "Draw!";
-       
     }  
 }
 
@@ -61,7 +56,7 @@ function game(choice) {
         
         player.innerHTML = `You: ${userScore}`
         computer.innerHTML = `Computer: ${computerScore}`
-        
+
     // if the player or computer scores 5 this if statement declares the winner and prompts if the player  wants to play another round if not alerts game over and refreshes the page for 5 seconds
     if (userScore === 5) {
         alert("You Win!")
