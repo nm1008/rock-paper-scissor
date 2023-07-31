@@ -6,8 +6,11 @@ const scissorsImg = document.querySelector(".scissors-link");
 // creating div element for move
 const move = document.querySelector(".instruction");
 
+
+//player score
 const player = document.querySelector(".player");
 const computer = document.querySelector(".computer");
+
 
 let userScore = 0;
 let computerScore = 0;
