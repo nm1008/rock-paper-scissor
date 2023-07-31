@@ -17,7 +17,7 @@ body{
   justify-content: space-between;
   border: 3px solid rgb(169, 193, 204);
   border-radius: 30px;
-  padding: 20px
+  padding: 20px;
 }
 .container h2{
   color: white
@@ -46,4 +46,19 @@ body{
 
 .scores{
   color: hsl(217, 16%, 45%);
+}
+
+.rps{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+img{
+  width: 300px;
+  border-radius: 50%;
+  margin: 20px 30px;
 }
